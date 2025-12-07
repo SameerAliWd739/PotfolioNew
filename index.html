@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Sameer | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="images/favicon/favi.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Config (optional custom colors) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#6366F1",
+            darkBg: "#050816",
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body class="bg-darkBg text-gray-100">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-darkBg/80 backdrop-blur border-b border-white/10">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+      <!-- Logo -->
+      <a href="#home" class="flex items-center gap-2">
+        <div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center font-bold">
+          S
+        </div>
+        <span class="font-semibold tracking-wide">Sameer.dev</span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="#home" class="nav-link hover:text-primary">Home</a>
+        <a href="#about" class="nav-link hover:text-primary">About</a>
+        <a href="#skills" class="nav-link hover:text-primary">Skills</a>
+        <a href="#projects" class="nav-link hover:text-primary">Projects</a>
+        <a href="#contact" class="nav-link hover:text-primary">Contact</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn"
+        class="md:hidden inline-flex items-center justify-center w-9 h-9 rounded-md border border-white/20">
+        <span class="sr-only">Open menu</span>
+        <div id="menu-icon" class="space-y-1.5">
+          <span class="block w-5 h-[2px] bg-gray-100"></span>
+          <span class="block w-5 h-[2px] bg-gray-100"></span>
+          <span class="block w-5 h-[2px] bg-gray-100"></span>
+        </div>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden max-h-0 overflow-hidden transition-all duration-300">
+      <nav class="px-6 pb-4 flex flex-col gap-2 text-sm font-medium bg-darkBg">
+        <a href="#home" class="mobile-link py-2">Home</a>
+        <a href="#about" class="mobile-link py-2">About</a>
+        <a href="#skills" class="mobile-link py-2">Skills</a>
+        <a href="#projects" class="mobile-link py-2">Projects</a>
+        <a href="#contact" class="mobile-link py-2">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="pt-24">
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-[80vh] flex items-center">
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+        <!-- Text -->
+        <div class="space-y-6">
+          <p class="uppercase text-sm tracking-[0.25em] text-gray-400">Frontend Developer • Designer</p>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+            Hi, I’m <span class="text-primary">Sameer</span> 👋<br />
+            I build clean web experiences.
+          </h1>
+          <p class="text-gray-300 max-w-xl">
+            I’m a front-end developer who loves crafting responsive, modern UIs with
+            HTML, CSS, JavaScript, and Tailwind CSS. I care about clean code and smooth UX.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="#projects"
+              class="px-5 py-3 rounded-full bg-primary text-white font-medium shadow-lg shadow-primary/40 hover:scale-[1.02] transition">
+              View Projects
+            </a>
+            <a href="#contact"
+              class="px-5 py-3 rounded-full border border-gray-500 text-gray-100 font-medium hover:bg-gray-800 transition">
+              Contact Me
+            </a>
+            <a href="resources/" download
+              class="px-5 py-3 rounded-full border border-gray-500 text-gray-100 font-medium hover:bg-gray-800 transition">
+              Download Resume
+            </a>
+          </div>
+          <div class="flex items-center gap-4 pt-3 text-sm text-gray-400">
+            <span class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+              Available for Internship
+            </span>
+          </div>
+        </div>
+
+        <!-- Right Side: Card -->
+        <div class="relative">
+          <div class="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-primary/20 blur-3xl"></div>
+          <div
+            class="relative rounded-3xl border border-white/10 bg-gradient-to-b from-gray-900/60 to-gray-900/30 p-6 shadow-2xl">
+            <p class="text-xs uppercase tracking-[0.2em] text-gray-400 mb-3">Current Focus</p>
+            <h2 class="text-xl font-semibold mb-4">Full Stack Web Development</h2>
+            <ul class="space-y-2 text-sm text-gray-300">
+              <li>⚡ Building responsive UI with Tailwind CSS</li>
+              <li>🛠️ Working with Django & REST APIs</li>
+              <li>📱 Website-first design and layout</li>
+              <li>🎨 UI/UX experimentation in Figma & Photoshop</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mt-5 text-xs">
+              <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10">HTML</span>
+              <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10">CSS</span>
+              <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10">JavaScript</span>
+              <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10">Tailwind</span>
+              <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10">Django</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-8">About Me</h2>
+        <div class="grid md:grid-cols-2 gap-10">
+          <p class="text-gray-300 leading-relaxed">
+            I’m Sameer, a self-taught front-end developer and designer from India. I enjoy turning complex
+            problems into simple, beautiful interfaces. When I’m not coding, I’m editing photos or videos
+            and exploring new design ideas.
+          </p>
+          <div class="grid sm:grid-cols-2 gap-4 text-sm">
+            <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+              <p class="text-gray-400 mb-1">Experience</p>
+              <p class="font-semibold">1+ year (learning & projects)</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+              <p class="text-gray-400 mb-1">Goal</p>
+              <p class="font-semibold">BCA & Web Dev Career</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+              <p class="text-gray-400 mb-1">Strength</p>
+              <p class="font-semibold">Clean UI & Details</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+              <p class="text-gray-400 mb-1">Location</p>
+              <p class="font-semibold">India (Remote / Onsite)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-20 bg-white/5">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-8">Skills</h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Column 1 -->
+          <div class="p-5 rounded-2xl bg-darkBg border border-white/10">
+            <h3 class="font-semibold mb-3 flex items-center gap-2">
+              <span class="text-xl">💻</span> Frontend
+            </h3>
+            <ul class="space-y-2 text-sm text-gray-300">
+              <li>HTML5 & Semantic markup</li>
+              <li>Modern CSS (Flexbox, Grid)</li>
+              <li>JavaScript (ES6+)</li>
+              <li>Tailwind CSS</li>
+              <li>Responsive Design</li>
+            </ul>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="p-5 rounded-2xl bg-darkBg border border-white/10">
+            <h3 class="font-semibold mb-3 flex items-center gap-2">
+              <span class="text-xl">⚙️</span> Backend & Tools
+            </h3>
+            <ul class="space-y-2 text-sm text-gray-300">
+              <li>Django (Basics)</li>
+              <li>Python (Basics)</li>
+              <li>Git & GitHub</li>
+              <li>VS Code</li>
+              <li>REST APIs (consume)</li>
+            </ul>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="p-5 rounded-2xl bg-darkBg border border-white/10">
+            <h3 class="font-semibold mb-3 flex items-center gap-2">
+              <span class="text-xl">🎨</span> Design
+            </h3>
+            <ul class="space-y-2 text-sm text-gray-300">
+              <li>Adobe Photoshop</li>
+              <li>Figma (UI Design)</li>
+              <li>Basic Prototyping</li>
+              <li>Branding & Thumbnails</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex items-end justify-between mb-8 gap-4">
+          <div>
+            <h2 class="text-3xl font-bold">Projects</h2>
+            <p class="text-gray-400 text-sm mt-1">
+              Some projects I’ve built while learning.
+            </p>
+          </div>
+          <a href="https://github.com/SameerAliWd739" target="_blank"
+            class="hidden sm:inline-block text-sm text-primary hover:underline">
+            View full GitHub →
+          </a>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <article
+            class="group rounded-2xl border border-white/10 bg-white/5 overflow-hidden hover:-translate-y-1 hover:border-primary/60 transition">
+            <div class="h-75 bg-gradient-to-br from-primary/40 to-transparent">
+              <img src="images/project/food.png" alt="">
+            </div>
+            <div class="p-5 space-y-3">
+              <h3 class="font-semibold text-lg">Django Food Ordering Website</h3>
+              <p class="text-sm text-gray-300 line-clamp-3">
+                Responsive restaurant website with menu, order tracking, and Tailwind UI.
+              </p>
+              <div class="flex flex-wrap gap-2 text-xs mt-2">
+                <span class="px-3 py-1 rounded-full bg-darkBg/80 border border-white/10">Django</span>
+                <span class="px-3 py-1 rounded-full bg-darkBg/80 border border-white/10">Tailwind</span>
+                <span class="px-3 py-1 rounded-full bg-darkBg/80 border border-white/10">HTML</span>
+              </div>
+              <div class="flex justify-between items-center text-xs pt-4">
+                <a href="" target="_blank" class="text-primary group-hover:underline">Live Demo</a>
+                <a href="" target="_blank" class="text-gray-400 hover:text-gray-200">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article
+            class="group rounded-2xl border border-white/10 bg-white/5 overflow-hidden hover:-translate-y-1 hover:border-primary/60 transition">
+            <div class="h-75 bg-gradient-to-br from-emerald-400/40 to-transparent">
+              <img src="images/project/pr1.png" alt="">
+            </div>
+            <div class="p-5 space-y-3">
+              <h3 class="font-semibold text-lg">Modern Ecommerce Website.</h3>
+              <p class="text-sm text-gray-300 line-clamp-3">
+                Multipal-page ecommerce website built using pure HTML, Tailwind, and JavaScript.
+              </p>
+              <div class="flex flex-wrap gap-2 text-xs mt-2">
+                <span class="px-3 py-1 rounded-full bg-darkBg/80 border border-white/10">HTML</span>
+                <span class="px-3 py-1 rounded-full bg-darkBg/80 border border-white/10">Tailwind</span>
+                <span class="px-3 py-1 rounded-full bg-darkBg/80 border border-white/10">JS</span>
+              </div>
+              <div class="flex justify-between items-center text-xs pt-4">
+                <a href="https://sameeraliwd739.github.io/Ecomm/" target="_blank"
+                  class="text-primary group-hover:underline">Live Demo</a>
+                <a href="https://github.com/SameerAliWd739/Ecomm" target="_blank"
+                  class="text-gray-400 hover:text-gray-200">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article
+            class="group rounded-2xl border border-white/10 bg-white/5 overflow-hidden hover:-translate-y-1 hover:border-primary/60 transition">
+            <div class="h-75 bg-gradient-to-br from-pink-500/40 to-transparent">
+              <img src="images/project/pr2.png" alt="">
+            </div>
+            <div class="p-5 space-y-3">
+              <h3 class="font-semibold text-lg">AdobePhotoshop & Figma</h3>
+              <p class="text-sm text-gray-300 line-clamp-3">
+                Custom banners, icons, and UI elements designed for Discord communities.
+              </p>
+              <div class="flex flex-wrap gap-2 text-xs mt-2">
+                <span class="px-3 py-1 rounded-full bg-darkBg/80 border border-white/10">Photoshop</span>
+                <span class="px-3 py-1 rounded-full bg-darkBg/80 border border-white/10">Figma</span>
+              </div>
+              <div class="flex justify-between items-center text-xs pt-4">
+                <a href="design-projects.html" target="_blank" class="text-primary group-hover:underline">Preview</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 bg-white/5">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-10 items-start">
+          <div>
+            <h2 class="text-3xl font-bold mb-4">Let’s work together</h2>
+            <p class="text-gray-300 mb-6">
+              Have an idea, internship opportunity, or project you’d like to discuss?
+              Send me a message and I’ll get back to you.
+            </p>
+            <ul class="space-y-3 text-sm text-gray-300">
+              <li>📧 Email: <span class="font-medium">youremail@example.com</span></li>
+              <li>💼 LinkedIn: <span class="font-medium">/in/your-link</span></li>
+              <li>💻 GitHub: <span class="font-medium">/your-github</span></li>
+            </ul>
+          </div>
+
+          <!-- Contact Form (frontend only) -->
+          <form class="space-y-4">
+            <div>
+              <label class="block text-sm mb-1" for="name">Name</label>
+              <input id="name" type="text" placeholder="Your name"
+                class="w-full px-3 py-2 rounded-xl bg-darkBg border border-white/10 text-sm outline-none focus:ring-2 focus:ring-primary" />
+            </div>
+            <div>
+              <label class="block text-sm mb-1" for="email">Email</label>
+              <input id="email" type="email" placeholder="you@example.com"
+                class="w-full px-3 py-2 rounded-xl bg-darkBg border border-white/10 text-sm outline-none focus:ring-2 focus:ring-primary" />
+            </div>
+            <div>
+              <label class="block text-sm mb-1" for="message">Message</label>
+              <textarea id="message" rows="4" placeholder="Tell me about your project..."
+                class="w-full px-3 py-2 rounded-xl bg-darkBg border border-white/10 text-sm outline-none focus:ring-2 focus:ring-primary"></textarea>
+            </div>
+            <button type="button" id="send-btn"
+              class="w-full md:w-auto px-6 py-2.5 rounded-full bg-primary text-sm font-medium shadow-lg shadow-primary/40 hover:scale-[1.02] transition">
+              Send Message
+            </button>
+            <p id="form-status" class="text-xs text-gray-400"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10">
+    <div
+      class="max-w-6xl mx-auto px-6 py-4 text-xs flex flex-col sm:flex-row items-center justify-between gap-2 text-gray-400">
+      <p>© <span id="year"></span> Sameer. All rights reserved.</p>
+      <p>Built with HTML • JS • Tailwind CSS</p>
+    </div>
+  </footer>
+
+  <!-- Scroll to top button -->
+  <button id="scroll-top"
+    class="fixed bottom-6 right-6 w-10 h-10 rounded-full bg-primary text-white text-xl flex items-center justify-center shadow-lg shadow-primary/40 opacity-0 pointer-events-none transition">
+    ↑
+  </button>
+
+  <!-- JavaScript -->
+  <script src="main.js">
+
+  </script>
+</body>
+
+</html>
